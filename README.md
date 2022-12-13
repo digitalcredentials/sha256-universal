@@ -55,7 +55,20 @@ npm install
 
 ## Usage
 
-TBD
+Usable in Typescript and Javascript.
+
+```js
+import { sha256digest } from 'sha256-universal'
+
+await sha256digest('test')
+// Uint8Array(32) [159, 134, 208, 129, 136,  76, 125, 101, 154,  47, 234, 160, 
+// 197,  90, 208,  21, 163, 191,  79,  27,  43,  11, 130,  44, 209,  93, 108,  
+// 21, 176, 240,  10,   8]
+```
+
+This function is mostly used to turn strings (at the moment, it only supports
+strings as input, so if you have raw bytes, text-encode them) into an array
+of digest bytes (which can then be base-X-encoded, etc).
 
 ## Contribute
 

@@ -17,11 +17,16 @@
   "files": [
     "dist",
     "README.md",
-    "LICENSE.md"
+    "LICENSE.md",
+    "CHANGELOG.md"
   ],
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
+  "dependencies": {
+    "fast-text-encoding": "^1.0.6",
+    "isomorphic-webcrypto": "^2.3.8"
+  },
   "devDependencies": {
     "@types/chai": "^4.3.4",
     "@types/mocha": "^10.0.1",
@@ -49,6 +54,17 @@
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.3"
+  },
+  "browser": {
+    "crypto": false,
+    "./src/sha256digest.js": "./src/sha256digest-browser.js",
+    "fast-text-encoding": false,
+    "isomorphic-webcrypto": false
+  },
+  "react-native": {
+    "crypto": false,
+    "./src/sha256digest.js": "./src/sha256digest-reactnative.js",
+    "./src/sha256digest-browser.js": false
   },
   "publishConfig": {
     "access": "public"
