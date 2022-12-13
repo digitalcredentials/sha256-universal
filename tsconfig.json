@@ -2,7 +2,7 @@
   "compilerOptions": {
     "strict": true,
     "target": "es2020",
-    "lib": ["es2020"],
+    "lib": ["es2020", "dom"],
     "module": "es6",
     "moduleResolution": "node",
     "outDir": "dist/esm",
@@ -10,6 +10,9 @@
     "removeComments": false,
     "preserveConstEnums": true,
     "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
   },
   "include": [
     "src/**/*",

@@ -6,11 +6,12 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json'
   },
-  ignorePatterns: ['dist/', 'test'],
+  ignorePatterns: ['dist/', 'test', 'index.d.ts'],
   rules: {
     'prettier/prettier': 'off',
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
-    '@typescript-eslint/return-await': 'off'
+    '@typescript-eslint/return-await': 'off',
+    '@typescript-eslint/prefer-ts-expect-error': 'off'
   }
 }
