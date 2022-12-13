@@ -1,7 +1,7 @@
 {
   "name": "@digitalcredentials/sha256-universal",
   "description": "A minimal Typescript SHA-256 digest library for Node.js, browsers, and React Native.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "build": "npm run clear && tsc -d && tsc -p tsconfig.json",
     "clear": "rimraf dist/*",
