@@ -1,4 +1,4 @@
-# isomorphic-lib-template Changelog
+# sha256-universal Changelog
 
 ## 1.0.0 - TBD
 

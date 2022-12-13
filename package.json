@@ -1,6 +1,6 @@
 {
-  "name": "@digitalcredentials/isomorphic-lib-template",
-  "description": "A Typescript/Javascript isomorphic library template, for use in the browser, Node.js, and React Native.",
+  "name": "@digitalcredentials/sha256-universal",
+  "description": "A minimal Typescript SHA-256 digest library for Node.js, browsers, and React Native.",
   "version": "0.0.1",
   "scripts": {
     "build": "npm run clear && tsc -d && tsc -p tsconfig.json",
@@ -61,7 +61,9 @@
     "spec": "test/**/*.ts"
   },
   "keywords": [
-    "dcc"
+    "dcc",
+    "sha256",
+    "sha-256"
   ],
   "engines": {
     "node": ">=16.0"
@@ -73,8 +75,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalcredentials/isomorphic-lib-template"
+    "url": "https://github.com/digitalcredentials/sha256-universal"
   },
-  "homepage": "https://github.com/digitalcredentials/isomorphic-lib-template",
-  "bugs": "https://github.com/digitalcredentials/isomorphic-lib-template/issues"
+  "homepage": "https://github.com/digitalcredentials/sha256-universal",
+  "bugs": "https://github.com/digitalcredentials/sha256-universal/issues"
 }
