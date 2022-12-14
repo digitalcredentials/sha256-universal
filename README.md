@@ -60,15 +60,31 @@ Usable in Typescript and Javascript.
 ```js
 import { sha256digest } from '@digitalcredentials/sha256-universal'
 
+// The digest function accepts either a string
 await sha256digest('test')
 // Uint8Array(32) [159, 134, 208, 129, 136,  76, 125, 101, 154,  47, 234, 160, 
 // 197,  90, 208,  21, 163, 191,  79,  27,  43,  11, 130,  44, 209,  93, 108,  
 // 21, 176, 240,  10,   8]
+
+// or a raw byte array
+const data = new TextEncoder().encode('test')
+// Uint8Array(4) [ 116, 101, 115, 116 ]
+await sha256digest(data)
+// Uint8Array(32) [159, 134, 208, 129, 136,  76, 125, 101, 154,  47, 234, 160, 
+// 197,  90, 208,  21, 163, 191,  79,  27,  43,  11, 130,  44, 209,  93, 108,  
+// 21, 176, 240,  10,   8]
+
+// If you want to hash a JS object, use JSON.stringify() first
+const data = JSON.stringify({ "hello": "world" })
+// '{"hello":"world"}'
+await sha256digest(data)
 ```
 
-This function is mostly used to turn strings (at the moment, it only supports
-strings as input, so if you have raw bytes, text-encode them) into an array
-of digest bytes (which can then be base-X-encoded, etc).
+Notice that the resulting hash digest is just an array of raw bytes. If you're
+intending to hash an object in order to obtain a deterministic content-addressable
+identifier string (for use in a database, for example), then you need to pass the
+result of `sha256digest()` to a base-X encoding function like 
+[`base64url-universal`](https://github.com/digitalcredentials/base64url-universal).
 
 ## Contribute
 

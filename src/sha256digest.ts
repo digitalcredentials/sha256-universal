@@ -7,10 +7,10 @@ import * as crypto from 'crypto'
 /**
  * Hashes a string of data using SHA-256.
  *
- * @param {string} data - the string to hash.
+ * @param {string|Uint8Array} data - Data to hash.
  *
  * @return {Uint8Array} the hash digest.
  */
-export async function sha256digest(data: string): Promise<Uint8Array> {
+export async function sha256digest(data: string | Uint8Array): Promise<Uint8Array> {
   return new Uint8Array(crypto.createHash('sha256').update(data).digest())
 }
