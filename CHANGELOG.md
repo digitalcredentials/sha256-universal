@@ -1,5 +1,9 @@
 # sha256-universal Changelog
 
+## 1.1.1 - 2022-12-15
+### Changed
+- Fix `dist/` setup to match `isomorphic-lib-template`.
+
 ## 1.1.0 - 2022-12-13
 
 ### Added
