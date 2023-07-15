@@ -1,6 +1,6 @@
 # Universal SHA-256 digest library _(@digitalcredentials/sha256-universal)_
 
-[![Build status](https://img.shields.io/github/workflow/status/digitalcredentials/sha256-universal/Node.js%20CI)](https://github.com/digitalcredentials/sha256-universal/actions?query=workflow%3A%22Node.js+CI%22)
+[![Node.js CI](https://github.com/digitalcredentials/sha256-universal/workflows/Node.js%20CI/badge.svg)](https://github.com/digitalcredentials/sha256-universal/actions?query=workflow%3A%22Node.js+CI%22)
 [![NPM Version](https://img.shields.io/npm/v/@digitalcredentials/sha256-universal.svg)](https://npm.im/@digitalcredentials/sha256-universal)
 
 > A minimal Typescript SHA-256 digest library for Node.js, browsers, and React Native.
